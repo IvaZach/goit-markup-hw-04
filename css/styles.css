@@ -105,13 +105,30 @@ ul {
   font-weight: var(--font-weight-nav);
   line-height: 1.14;
   letter-spacing: 0.02em;
+  text-align:center;
+  
 }
+.nav-icon-envelope{
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .tel-link {
   color: var(--paragraph-color);
   text-decoration: none;
   font-weight: var(--font-weight-nav);
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  
+}
+.nav-icon-smartphone{
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 .nav-link:focus,
 .nav-link:hover,
@@ -127,7 +144,9 @@ ul {
 
 /* HERO */
 .section-bg-hero {
-  background-color: var(--bg-color-main);
+  background-image: url(../images/img-hero-overlay.png), url(../images/img-hero.jpg);
+  background-size: cover;
+  background-color: #c4c4c4;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -187,11 +206,12 @@ ul {
   clip-path: inset(50%);
   margin: -1px;
 }
-
-.flex {
+.about-flex {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
+
 .header-second {
   color: var(--header-color);
   font-weight: var(--font-weight-header);
@@ -227,7 +247,11 @@ ul {
 .work {
   padding-top: 0px;
 }
-
+.about-work-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .header-about-work-list {
   width: 370px;
 }
@@ -240,8 +264,13 @@ img {
   background-color: #f5f4fa;
 }
 
+.our-team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .our-team-list {
-  background: var(--second-accent-color);
+  background-color: var(--second-accent-color);
   width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -254,6 +283,7 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 .our-team-paragraph {
   color: var(--paragraph-color);
@@ -262,18 +292,60 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-
-  margin-top: 10px;
+  margin-bottom: 16px;
 }
 .our-team-item {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.our-team-social-container {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.our-team-icon-container {
+  background: transparent;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #afb1b8;
+}
+.our-team-icon-link {
+  color: currentColor;
+}
+.our-team-icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+.our-team-icon-container:not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-icon-container:hover,
+.our-team-icon-container:focus {
+  background: var(--accent-color);
+  color: var(--second-accent-color);
+}
+
 /* FOOTER */
 .footer {
   background-color: var(--bg-color-main);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.ft-container {
+  display: flex;
+}
+.ft-left-side-container {
+  margin-right: 70px;
 }
 
 .logo-ft {
@@ -333,6 +405,47 @@ img {
 .tel-link-ft:focus,
 .tel-link-ft:hover {
   color: var(--accent-color);
+}
+.ft-header-social {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-accent-color);
+  margin-bottom: 20px;
+}
+
+.ft-social-container {
+  display: flex;
+}
+
+.ft-icon-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  box-sizing: border-box;
+  color: var(--second-accent-color);
+}
+.ft-icon-link {
+  color: currentColor;
+}
+.ft-icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+.ft-icon-container:not(:last-child) {
+  margin-right: 10px;
+}
+
+.ft-icon-container:hover,
+.ft-icon-container:focus {
+  background: var(--accent-color);
 }
 
 /* PORTFOLIO PAGE */
@@ -419,4 +532,19 @@ img {
 }
 .decoration {
   text-decoration: none;
+}
+
+/* Our clients */
+
+.our-clients-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.our-clients-rectangle {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  background-color: transparent;
 }
